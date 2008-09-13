@@ -19,7 +19,7 @@ our @ISA = qw(Exporter DynaLoader);
 our %EXPORT_TAGS = ( 'all' => [ qw(GetUrlCacheFile) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 bootstrap Win32::INET $VERSION;
 
@@ -31,24 +31,31 @@ __END__
 
 =head1 NAME
 
-Win32::INET - Perl extension for get Internet Explorer Temparay Filename.
+Win32::INET - Perl extension for Extract Temporary Internet File Path of Internet Explorer.
 
 =head1 SYNOPSIS
 
   use Win32::INET qw/GetUrlCacheFile/;
-  my $filepath = GetUrlCacheFile("http://blah.org/image.jpg");
+  my $path = GetUrlCacheFile("http://blah.org/image.jpg");
 
-  if($filepath eq '') {
-      print "filepath is not found$/";
+  if($path eq '') {
+      print "path is not found$/";
   }else{
-      print "filepath is $filepath$/";
+      print "path is $path$/";
   }
+
+=head2 PPM DISTRIBUTION
+
+   If you are using ActivePerl, you can also install with the command
+   ppm install http://tw.kuso.cc/Win32-INET.ppd  
 
 =head1 AUTHOR and LICENSE
 
 Lilo Huang, kenwu@cpan.org
 
 Copyright (c) 2008 Lilo Huang. All rights reserved.
+
+http://blog.roodo.com/kenwu
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

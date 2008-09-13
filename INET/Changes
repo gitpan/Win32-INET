@@ -4,3 +4,5 @@ Revision history for Perl extension Win32::INET.
 	- original version; created by h2xs 1.21 with options
 		-A -n Win32::INET
 
+0.02  Sat Sep 13 23:39:34 2008
+	- typo fix and help file
