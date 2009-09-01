@@ -19,7 +19,7 @@ our @ISA = qw(Exporter DynaLoader);
 our %EXPORT_TAGS = ( 'all' => [ qw(GetUrlCacheFile) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 bootstrap Win32::INET $VERSION;
 
@@ -44,18 +44,11 @@ Win32::INET - Perl extension for Extract Temporary Internet File Path of Interne
       print "path is $path$/";
   }
 
-=head2 PPM DISTRIBUTION
-
-   If you are using ActivePerl, you can also install with the command
-   ppm install http://tw.kuso.cc/Win32-INET.ppd  
-
 =head1 AUTHOR and LICENSE
 
-Lilo Huang, kenwu@cpan.org
+Lilo Huang
 
 Copyright (c) 2008 Lilo Huang. All rights reserved.
-
-http://blog.roodo.com/kenwu
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
